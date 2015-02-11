@@ -43,4 +43,13 @@ public class MainActivity extends Activity {
         finish();
         System.exit(0);
     }
+
+
+    /*
+    use this to call the custom dialog
+    source: http://stackoverflow.com/questions/13341560/how-to-create-a-custom-dialog-box-in-android
+    CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+    cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    cdd.show();
+     */
 }
