@@ -21,7 +21,6 @@ public class MainActivity extends Activity implements FragmentCommunication {
     private ImageButton storyButton;
     private ImageButton animalsButton;
     private ImageButton gamesButton;
-    private StoryFragment activeFragment;
     private int currentPage = 0;
 
     @Override
@@ -100,25 +99,26 @@ public class MainActivity extends Activity implements FragmentCommunication {
         });
     }
 
+    @Override
     public void nextFragment(){
-        System.out.println(currentPage+1);
+        currentPage = currentPage++;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out);
-        activeFragment = StoryFragment.newInstance(Integer.toString(++currentPage),null);
-        fragmentTransaction.replace(android.R.id.content, activeFragment).commit();
+        fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out,R.animator.flip_left_in,R.animator.flip_left_out);
+        StoryFragment storyFragment = StoryFragment.newInstance(Integer.toString(currentPage),null);
+        fragmentTransaction.add(android.R.id.content, storyFragment).addToBackStack(null).commit();
+        System.out.println(currentPage);
     }
 
+    @Override
     public void prevFragment(){
-        System.out.println(currentPage-1);
-        if(currentPage-1>0) {
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out);
-            activeFragment = StoryFragment.newInstance(Integer.toString(--currentPage), null);
-            fragmentTransaction.replace(android.R.id.content, activeFragment).commit();
-        }
-        else{
-            fragmentManager.beginTransaction().remove(activeFragment).commit();
-        }
+        fragmentManager.popBackStack();
+        currentPage = currentPage--;
+        System.out.println(currentPage);
+    }
+
+    @Override
+    public void fragmentBackButtonPressed() {
+        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 
 

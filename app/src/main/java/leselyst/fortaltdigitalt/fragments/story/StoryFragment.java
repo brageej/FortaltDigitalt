@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,6 +93,20 @@ public class StoryFragment extends Fragment {
         next = (Button) view.findViewById(R.id.button);
         prev = (Button) view.findViewById(R.id.button2);
         addButtonListeners();
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener( new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
+                System.out.println("key pressed");
+                if(keyCode == KeyEvent.KEYCODE_BACK){
+                    mListener.fragmentBackButtonPressed();
+                    System.out.println("working");
+                    return true;
+                }
+                return false;
+            }
+        });
         return view;
     }
 
