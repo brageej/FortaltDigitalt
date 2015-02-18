@@ -9,8 +9,7 @@ import android.widget.Button;
 
 import leselyst.fortaltdigitalt.R;
 
-public class CustomDialogClass extends Dialog implements
-    android.view.View.OnClickListener {
+public class CustomDialogClass extends Dialog implements View.OnClickListener {
 
   public Activity c;
   public Dialog d;
@@ -34,18 +33,18 @@ public class CustomDialogClass extends Dialog implements
 
   }
 
-  @Override
-  public void onClick(View v) {
-    switch (v.getId()) {
-    case R.id.btn_yes:
-      c.finish();
-      break;
-    case R.id.btn_no:
-      dismiss();
-      break;
-    default:
-      break;
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_yes:
+                c.finish();
+                break;
+            case R.id.btn_no:
+                dismiss();
+                break;
+            default:
+                break;
+        }
+        dismiss();
     }
-    dismiss();
-  }
 }
