@@ -8,4 +8,6 @@ public interface FragmentCommunication {
     public void nextFragment();
 
     public void prevFragment();
+
+    public void fragmentBackButtonPressed();
 }
