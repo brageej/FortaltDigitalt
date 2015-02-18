@@ -1,20 +1,41 @@
 package leselyst.fortaltdigitalt;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+
+import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements FragmentCommunication {
+
+    private FragmentManager fragmentManager;
+    private ImageButton storyButton;
+    private ImageButton animalsButton;
+    private ImageButton gamesButton;
+    private StoryFragment activeFragment;
+    private int currentPage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.forest_sound);
-        mp.start();
+        fragmentManager = getFragmentManager();
+/* This can be done to start sounds
+//        MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.forest_sound);
+//        mp.start();
+*/
+        bindViews();
+        addButtonListeners();
+        addFragmentManagerListener();
     }
 
 
@@ -40,9 +61,67 @@ public class MainActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
-        System.exit(0);
+        System.out.println(fragmentManager.getBackStackEntryCount());
+        if(fragmentManager.getBackStackEntryCount() == 0) {
+            finish();
+            System.exit(0);
+        }
+        else{
+            prevFragment();
+        }
     }
+
+//    @Override
+//    public void onFragmentInteraction(Uri uri) {
+//    }
+
+
+
+    private void bindViews(){
+        storyButton = (ImageButton)findViewById(R.id.storyButton);
+        animalsButton = (ImageButton) findViewById(R.id.animalButtpn);
+        gamesButton = (ImageButton) findViewById(R.id.gameButton);
+    }
+
+    private void addButtonListeners(){
+        storyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nextFragment();
+            }
+        });
+    }
+
+    private void addFragmentManagerListener(){
+        fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+            }
+        });
+    }
+
+    public void nextFragment(){
+        System.out.println(currentPage+1);
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out);
+        activeFragment = StoryFragment.newInstance(Integer.toString(++currentPage),null);
+        fragmentTransaction.replace(android.R.id.content, activeFragment).commit();
+    }
+
+    public void prevFragment(){
+        System.out.println(currentPage-1);
+        if(currentPage-1>0) {
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out);
+            activeFragment = StoryFragment.newInstance(Integer.toString(--currentPage), null);
+            fragmentTransaction.replace(android.R.id.content, activeFragment).commit();
+        }
+        else{
+            fragmentManager.beginTransaction().remove(activeFragment).commit();
+        }
+    }
+
+
 
 
     /*
