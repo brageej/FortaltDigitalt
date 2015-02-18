@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import leselyst.fortaltdigitalt.fragments.story.CustomDialogClass;
 import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 
 
@@ -87,7 +90,10 @@ public class MainActivity extends Activity implements FragmentCommunication {
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nextFragment();
+                //nextFragment();
+                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                cdd.show();
             }
         });
     }
