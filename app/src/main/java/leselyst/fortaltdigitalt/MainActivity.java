@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageButton;
 
 import leselyst.fortaltdigitalt.fragments.story.CustomDialogClass;
@@ -90,9 +91,13 @@ public class MainActivity extends Activity implements FragmentCommunication {
             @Override
             public void onClick(View view) {
                 //nextFragment();
-                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
-                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                cdd.show();
+                CustomDialogClass dialog = new CustomDialogClass(MainActivity.this);
+                Window dialogWindow = dialog.getWindow();
+
+                dialogWindow.getAttributes().x = (int) storyButton.getX() + storyButton.getWidth();
+                dialogWindow.getAttributes().y = (int) storyButton.getY() - storyButton.getHeight();
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
     }
