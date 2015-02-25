@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="80dp"
+    android:layout_height="200dp"
     android:background="@drawable/dialog_background"
     android:orientation="vertical" >
 
@@ -10,40 +10,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:text="Do you realy want to exit ?"
-        android:textColor="@android:color/white"
-        android:textSize="15dp"
-        android:textStyle="bold" >
+        android:text="Ønsker du og starte fra beynnelsen av,\n eller fortsette der du sluttet sist?"
+        android:textColor="#5DBCD2"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
     </TextView>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="#3E80B4"
-        android:orientation="horizontal" >
+    <Button
+        android:id="@+id/btn_beginning"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@android:drawable/btn_default"
+        android:clickable="true"
+        android:text="Begynnelsen"
+        android:textColor="#5DBCD2"
+        android:textSize="12dp"
+        android:layout_below="@+id/txt_dia"
+        android:layout_toLeftOf="@+id/btn_continue"
+        android:layout_toStartOf="@+id/btn_continue"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp" />
 
-        <Button
-            android:id="@+id/btn_yes"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@android:color/white"
-            android:clickable="true"
-            android:text="Yes"
-            android:textColor="#5DBCD2"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@android:drawable/btn_default"
+        android:clickable="true"
+        android:text="Fortsette"
+        android:textColor="#5DBCD2"
+        android:textSize="12dp"
+        android:layout_below="@+id/txt_dia"
+        android:layout_alignRight="@+id/txt_dia"
+        android:layout_alignEnd="@+id/txt_dia" />
 
-        <Button
-            android:id="@+id/btn_no"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="5dp"
-            android:background="@android:color/white"
-            android:clickable="true"
-            android:text="No"
-            android:textColor="#5DBCD2"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

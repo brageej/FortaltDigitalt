@@ -1,13 +1,10 @@
 package leselyst.fortaltdigitalt;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -91,13 +88,28 @@ public class MainActivity extends Activity implements FragmentCommunication {
             @Override
             public void onClick(View view) {
                 //nextFragment();
-                CustomDialogClass dialog = new CustomDialogClass(MainActivity.this);
+                final CustomDialogClass dialog = new CustomDialogClass(MainActivity.this);
                 Window dialogWindow = dialog.getWindow();
 
                 dialogWindow.getAttributes().x = (int) storyButton.getX() + storyButton.getWidth();
                 dialogWindow.getAttributes().y = (int) storyButton.getY() - storyButton.getHeight();
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
+
+                dialog.beginningBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        nextFragment();
+                        dialog.dismiss();
+                    }
+                });
+                dialog.continueBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        nextFragment();
+                        dialog.dismiss();
+                    }
+                });
             }
         });
     }
