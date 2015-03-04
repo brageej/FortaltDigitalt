@@ -2,34 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1"
-    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment">
+    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment"
+    android:background="#ff26d2ff">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next page"
-        android:id="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Previous page"
-        android:id="@+id/button2"
-        android:layout_gravity="center_vertical"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/background_page1"
+        android:layout_alignParentBottom="true" />
 
     <include layout="@layout/page_navigation"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:id="@+id/include" />
+
 </RelativeLayout>

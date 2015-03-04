@@ -1,23 +1,25 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1"
-    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment">
+    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment"
+    android:background="#ff26d2ff">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next page"
-        android:id="@+id/button" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prev page"
-        android:id="@+id/button2"
-        android:layout_gravity="center_vertical" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/background_page2"
+        android:layout_alignParentBottom="true" />
 
-</LinearLayout>
+    <include layout="@layout/page_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/include" />
+
+</RelativeLayout>
+

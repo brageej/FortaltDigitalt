@@ -2,15 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1"
-    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment">
+    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment"
+    android:background="#ff26d2ff">
 
     <!-- TODO: Update blank fragment layout -->
 
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/background_page2"
+        android:layout_above="@+id/include" />
+
     <include layout="@layout/page_navigation"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:id="@+id/include" />
 
 </RelativeLayout>
+
