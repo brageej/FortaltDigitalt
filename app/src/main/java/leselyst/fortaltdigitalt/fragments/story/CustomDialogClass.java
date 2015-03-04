@@ -3,17 +3,16 @@ package leselyst.fortaltdigitalt.fragments.story;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
 import leselyst.fortaltdigitalt.R;
 
-public class CustomDialogClass extends Dialog implements View.OnClickListener {
+public class CustomDialogClass extends Dialog {
 
   public Activity c;
   public Dialog d;
-  public Button yes, no;
+  public Button continueBtn, beginningBtn;
 
   public CustomDialogClass(Activity a) {
     super(a);
@@ -26,25 +25,7 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener {
     super.onCreate(savedInstanceState);
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     setContentView(R.layout.custom_dialog);
-    yes = (Button) findViewById(R.id.btn_yes);
-    no = (Button) findViewById(R.id.btn_no);
-    yes.setOnClickListener(this);
-    no.setOnClickListener(this);
-
+    continueBtn = (Button) findViewById(R.id.btn_continue);
+    beginningBtn = (Button) findViewById(R.id.btn_beginning);
   }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_yes:
-                c.finish();
-                break;
-            case R.id.btn_no:
-                dismiss();
-                break;
-            default:
-                break;
-        }
-        dismiss();
-    }
 }
