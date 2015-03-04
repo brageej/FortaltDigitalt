@@ -3,6 +3,7 @@ package leselyst.fortaltdigitalt;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.GestureDetectorCompat;
 import android.util.Log;
@@ -22,6 +23,9 @@ public class MainActivity extends Activity implements FragmentCommunication {
     private int currentPage = 0;
     private boolean storyStarted = false;
     private GestureDetectorCompat detectorCompat;
+    public static final String STORAGE_NAME = "SN";
+    public static final String STORAGE_KEY_PAGENUMBER = "SKP";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +69,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
         Log.v("onBackPressed()","back pressed with bool: " + storyStarted);
 
         if(storyStarted){
-
+            storyStarted = false;
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out, R.animator.flip_right_in, R.animator.flip_right_out);
             fragmentTransaction.add(R.id.content_frame, HomeFragment.newInstance()).commit();
@@ -94,7 +98,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
      * @return the value stored in sharedpreferences for the marked page number
      */
     private int getMarkedPage() {
-        return 3;
+        return getSharedPreferences(STORAGE_NAME,0).getInt(STORAGE_KEY_PAGENUMBER,-1);
     }
 
     /**
@@ -103,6 +107,9 @@ public class MainActivity extends Activity implements FragmentCommunication {
      * @param pageNumber the number to be stored
      */
     private void setMarkedPage(int pageNumber){
+        Log.v("setMarkedPage","pagenumber: " + pageNumber);
+        SharedPreferences storage = getSharedPreferences(STORAGE_NAME,0);
+        storage.edit().putInt(STORAGE_KEY_PAGENUMBER,pageNumber).commit();
 
     }
 
@@ -110,6 +117,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
     public void nextFragment(){
         if(storyStarted) {
             currentPage++;
+            setMarkedPage(currentPage);
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out, R.animator.flip_left_in, R.animator.flip_left_out);
             fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();//.addToBackStack(null).commit();
@@ -121,6 +129,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
     public void prevFragment(){
         if(storyStarted) {
             currentPage--;
+            setMarkedPage(currentPage);
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out, R.animator.flip_right_in, R.animator.flip_right_out);
             fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();
