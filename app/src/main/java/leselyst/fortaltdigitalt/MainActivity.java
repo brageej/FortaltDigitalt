@@ -95,8 +95,8 @@ public class MainActivity extends Activity implements FragmentCommunication {
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                storyStarted = true;
-                nextFragment();
+//                storyStarted = true;
+//                nextFragment();
 //                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
 //                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 //                cdd.show();
@@ -113,6 +113,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
                     @Override
                     public void onClick(View view) {
                         nextFragment();
+                        storyStarted = true;
                         dialog.dismiss();
                     }
                 });
@@ -120,6 +121,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
                     @Override
                     public void onClick(View view) {
                         nextFragment();
+                        storyStarted = true;
                         dialog.dismiss();
                     }
                 });

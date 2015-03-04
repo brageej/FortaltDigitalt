@@ -2,21 +2,19 @@ package leselyst.fortaltdigitalt.fragments.story;
 
 
 import android.app.Activity;
-import android.gesture.Gesture;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import leselyst.fortaltdigitalt.FragmentCommunication;
 import leselyst.fortaltdigitalt.R;
-import leselyst.fortaltdigitalt.SwipeGestureDetector;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,14 +27,15 @@ import leselyst.fortaltdigitalt.SwipeGestureDetector;
 public class StoryFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PAGE_NUMBER = "page number";
     private static final String ARG_PARAM2 = "param2";
 
     private Button next;
     private Button prev;
+    private TextView currentPageLbl;
 
     // TODO: Rename and change types of parameters
-    private int mParam1;
+    private int pageNumber;
     private String mParam2;
 
     private GestureDetector gestureDetector;
@@ -47,14 +46,14 @@ public class StoryFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
+     * @param pageNumber Parameter 1.
      * @return A new instance of fragment StoryFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static StoryFragment newInstance(int param1) {
+    public static StoryFragment newInstance(int pageNumber) {
         StoryFragment fragment = new StoryFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_PARAM1, param1);
+        args.putInt(ARG_PAGE_NUMBER, pageNumber);
         fragment.setArguments(args);
         return fragment;
     }
@@ -67,7 +66,7 @@ public class StoryFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getInt(ARG_PARAM1);
+            pageNumber = getArguments().getInt(ARG_PAGE_NUMBER);
         }
 
     }
@@ -93,10 +92,12 @@ public class StoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        int layout = getLayout(mParam1);
+        int layout = getLayout(pageNumber);
         View view =  inflater.inflate(layout, container, false);
-        next = (Button) view.findViewById(R.id.button);
-        prev = (Button) view.findViewById(R.id.button2);
+        next = (Button) view.findViewById(R.id.next_btn);
+        prev = (Button) view.findViewById(R.id.prev_btn);
+        currentPageLbl = (TextView) view.findViewById(R.id.current_pg_lbl);
+        currentPageLbl.setText(""+pageNumber);
         addButtonListeners();
         view.setFocusableInTouchMode(true);
         view.requestFocus();
