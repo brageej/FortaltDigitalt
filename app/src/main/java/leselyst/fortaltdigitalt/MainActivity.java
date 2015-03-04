@@ -9,8 +9,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.view.GestureDetectorCompat;
+import android.util.Log;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -24,7 +28,10 @@ public class MainActivity extends Activity implements FragmentCommunication {
     private ImageButton storyButton;
     private ImageButton animalsButton;
     private ImageButton gamesButton;
+//    private SwipeGestureDetector detector = new SwipeGestureDetector();
     private int currentPage = 0;
+    private boolean storyStarted = false;
+    private GestureDetectorCompat detectorCompat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +42,7 @@ public class MainActivity extends Activity implements FragmentCommunication {
 //        MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.forest_sound);
 //        mp.start();
 */
+        detectorCompat = new GestureDetectorCompat(this,new SwipeGestureDetector(this));
         bindViews();
         addButtonListeners();
         addFragmentManagerListener();
@@ -89,10 +97,11 @@ public class MainActivity extends Activity implements FragmentCommunication {
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //nextFragment();
-                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
-                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                cdd.show();
+                storyStarted = true;
+                nextFragment();
+//                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+//                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                cdd.show();
             }
         });
     }
@@ -107,25 +116,42 @@ public class MainActivity extends Activity implements FragmentCommunication {
 
     @Override
     public void nextFragment(){
-        currentPage = currentPage++;
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out,R.animator.flip_left_in,R.animator.flip_left_out);
-        StoryFragment storyFragment = StoryFragment.newInstance(Integer.toString(currentPage),null);
-        fragmentTransaction.add(android.R.id.content, storyFragment).addToBackStack(null).commit();
-        System.out.println(currentPage);
+        if(storyStarted) {
+            currentPage = currentPage + 1;
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out, R.animator.flip_left_in, R.animator.flip_left_out);
+            StoryFragment storyFragment = StoryFragment.newInstance(currentPage);
+            fragmentTransaction.add(android.R.id.content, storyFragment).addToBackStack(null).commit();
+            System.out.println(currentPage);
+        }
     }
 
     @Override
     public void prevFragment(){
-        fragmentManager.popBackStack();
-        currentPage = currentPage--;
-        System.out.println(currentPage);
+        if(storyStarted) {
+            fragmentManager.popBackStack();
+            currentPage = currentPage - 1;
+            System.out.println(currentPage);
+            if(currentPage == 0){
+                storyStarted = false;
+            }
+        }
     }
 
     @Override
     public void fragmentBackButtonPressed() {
         fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        currentPage = 0;
+        storyStarted = false;
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        detectorCompat.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+
 
 
 
@@ -137,4 +163,5 @@ public class MainActivity extends Activity implements FragmentCommunication {
     cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     cdd.show();
      */
+
 }
