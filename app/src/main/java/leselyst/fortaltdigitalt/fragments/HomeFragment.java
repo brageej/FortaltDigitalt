@@ -10,12 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 import leselyst.fortaltdigitalt.FragmentCommunication;
-import leselyst.fortaltdigitalt.MainActivity;
 import leselyst.fortaltdigitalt.R;
-import leselyst.fortaltdigitalt.fragments.story.CustomDialogClass;
+import leselyst.fortaltdigitalt.CustomDialogClass;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,7 +38,6 @@ public class HomeFragment extends Fragment {
 
      * @return A new instance of fragment HomeFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
         return fragment;
@@ -73,12 +70,6 @@ public class HomeFragment extends Fragment {
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                storyStarted = true;
-//                nextFragment();
-//                CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
-//                cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//                cdd.show();
-                //nextFragment();
                 final CustomDialogClass dialog = new CustomDialogClass(getActivity());
                 Window dialogWindow = dialog.getWindow();
 

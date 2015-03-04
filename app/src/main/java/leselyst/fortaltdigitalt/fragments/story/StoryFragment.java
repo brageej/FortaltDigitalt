@@ -25,10 +25,8 @@ import leselyst.fortaltdigitalt.R;
  * create an instance of this fragment.
  */
 public class StoryFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PAGE_NUMBER = "page number";
-    private static final String ARG_PARAM2 = "param2";
 
     private Button next;
     private Button prev;
@@ -36,11 +34,9 @@ public class StoryFragment extends Fragment {
 
     // TODO: Rename and change types of parameters
     private int pageNumber;
-    private String mParam2;
 
     private GestureDetector gestureDetector;
 
-//    private OnFragmentInteractionListener mListener;
     private FragmentCommunication mListener;
     /**
      * Use this factory method to create a new instance of
@@ -119,13 +115,6 @@ public class StoryFragment extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-//    public void onButtonPressed(Uri uri) {
-//        if (mListener != null) {
-//            mListener.onFragmentInteraction(uri);
-//        }
-//    }
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -141,21 +130,6 @@ public class StoryFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
     }
 
     private int getLayout(int page){

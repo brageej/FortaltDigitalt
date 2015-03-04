@@ -10,6 +10,4 @@ public interface FragmentCommunication {
     public void prevFragment();
 
     public void startStory(boolean fromBeginnning);
-
-    //public void fragmentBackButtonPressed();
 }
