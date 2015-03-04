@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import leselyst.fortaltdigitalt.fragments.HomeFragment;
 import leselyst.fortaltdigitalt.fragments.story.CustomDialogClass;
 import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 
@@ -23,9 +24,9 @@ import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 public class MainActivity extends Activity implements FragmentCommunication {
 
     private FragmentManager fragmentManager;
-    private ImageButton storyButton;
-    private ImageButton animalsButton;
-    private ImageButton gamesButton;
+//    private ImageButton storyButton;
+//    private ImageButton animalsButton;
+//    private ImageButton gamesButton;
 //    private SwipeGestureDetector detector = new SwipeGestureDetector();
     private int currentPage = 0;
     private boolean storyStarted = false;
@@ -36,14 +37,18 @@ public class MainActivity extends Activity implements FragmentCommunication {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fragmentManager = getFragmentManager();
+
+        getFragmentManager().beginTransaction().replace(R.id.content_frame, HomeFragment.newInstance()).commit();
+
+
 /* This can be done to start sounds
 //        MediaPlayer mp = MediaPlayer.create(getApplicationContext(),R.raw.forest_sound);
 //        mp.start();
 */
         detectorCompat = new GestureDetectorCompat(this,new SwipeGestureDetector(this));
-        bindViews();
-        addButtonListeners();
-        addFragmentManagerListener();
+        //bindViews();
+        //addButtonListeners();
+        //addFragmentManagerListener();
     }
 
 
@@ -68,7 +73,19 @@ public class MainActivity extends Activity implements FragmentCommunication {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+
+        Log.v("onBackPressed()","back pressed with bool: " + storyStarted);
+
+        if(storyStarted){
+
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out, R.animator.flip_right_in, R.animator.flip_right_out);
+            fragmentTransaction.add(R.id.content_frame, HomeFragment.newInstance()).commit();
+        }
+        else {
+            super.onBackPressed();
+        }
+        /*
         System.out.println(fragmentManager.getBackStackEntryCount());
         if(fragmentManager.getBackStackEntryCount() == 0) {
             finish();
@@ -77,7 +94,10 @@ public class MainActivity extends Activity implements FragmentCommunication {
         else{
             prevFragment();
         }
+        */
+
     }
+
 
 //    @Override
 //    public void onFragmentInteraction(Uri uri) {
@@ -85,13 +105,13 @@ public class MainActivity extends Activity implements FragmentCommunication {
 
 
 
-    private void bindViews(){
+    /*private void bindViews(){
         storyButton = (ImageButton)findViewById(R.id.storyButton);
         animalsButton = (ImageButton) findViewById(R.id.animalButtpn);
         gamesButton = (ImageButton) findViewById(R.id.gameButton);
-    }
+    }*/
 
-    private void addButtonListeners(){
+/*    private void addButtonListeners(){
         storyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,22 +132,20 @@ public class MainActivity extends Activity implements FragmentCommunication {
                 dialog.beginningBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        nextFragment();
-                        storyStarted = true;
+                        startStory(true);
                         dialog.dismiss();
                     }
                 });
                 dialog.continueBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        nextFragment();
-                        storyStarted = true;
+                        startStory(false);
                         dialog.dismiss();
                     }
                 });
             }
         });
-    }
+    }*/
 
     private void addFragmentManagerListener(){
         fragmentManager.addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
@@ -137,14 +155,44 @@ public class MainActivity extends Activity implements FragmentCommunication {
         });
     }
 
+    public void startStory(boolean fromBeginnning){
+        storyStarted = true;
+        if (fromBeginnning)
+            currentPage = 1;
+        else
+            currentPage = getMarkedPage();
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out, R.animator.flip_left_in, R.animator.flip_left_out);
+        fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();//.addToBackStack(null).commit();
+
+    }
+
+    /**
+     * Uses the shared preferences to find the page number which the app exited from last time.
+     *
+     * @return the value stored in sharedpreferences for the marked page number
+     */
+    private int getMarkedPage() {
+        return 3;
+    }
+
+    /**
+     * saves the pagenumber in sharedprefernces to act like a bookmark.
+     *
+     * @param pageNumber the number to be stored
+     */
+    private void setMarkedPage(int pageNumber){
+
+    }
+
     @Override
     public void nextFragment(){
         if(storyStarted) {
-            currentPage = currentPage + 1;
+            currentPage++;
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out, R.animator.flip_left_in, R.animator.flip_left_out);
-            StoryFragment storyFragment = StoryFragment.newInstance(currentPage);
-            fragmentTransaction.add(android.R.id.content, storyFragment).addToBackStack(null).commit();
+            fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();//.addToBackStack(null).commit();
             System.out.println(currentPage);
         }
     }
@@ -152,21 +200,26 @@ public class MainActivity extends Activity implements FragmentCommunication {
     @Override
     public void prevFragment(){
         if(storyStarted) {
-            fragmentManager.popBackStack();
+            /*fragmentManager.popBackStack();
             currentPage = currentPage - 1;
             System.out.println(currentPage);
             if(currentPage == 0){
                 storyStarted = false;
-            }
+            }*/
+
+            currentPage--;
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.animator.flip_left_in, R.animator.flip_left_out, R.animator.flip_right_in, R.animator.flip_right_out);
+            fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();
         }
     }
 
-    @Override
+    /*@Override
     public void fragmentBackButtonPressed() {
         fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         currentPage = 0;
         storyStarted = false;
-    }
+    }*/
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {

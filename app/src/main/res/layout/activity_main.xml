@@ -1,45 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/background1"
-    tools:context=".MainActivity">
-
-    <ImageButton
-        android:id="@+id/gameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/games"
-        android:background="@android:color/transparent"
-        android:text="Spill"
-        android:layout_marginTop="42dp"
-        android:layout_alignTop="@+id/story_fragment"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:id="@+id/storyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/story"
-        android:background="@android:color/transparent"
-        android:text="Start Historie"
-        android:layout_alignBottom="@+id/story_fragment"
-        android:layout_centerHorizontal="true" />
-    <ImageButton
-        android:id="@+id/animalButtpn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/animals"
-        android:background="@android:color/transparent"
-        android:text="Dyr"
-        android:layout_alignTop="@+id/gameButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    tools:context=".MainActivity"
+    android:id="@+id/content_frame">
 
 
     <fragment
@@ -48,5 +12,4 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         />
-
-</RelativeLayout>
+</FrameLayout>

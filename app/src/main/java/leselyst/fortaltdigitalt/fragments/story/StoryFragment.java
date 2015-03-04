@@ -101,7 +101,7 @@ public class StoryFragment extends Fragment {
         addButtonListeners();
         view.setFocusableInTouchMode(true);
         view.requestFocus();
-        view.setOnKeyListener( new View.OnKeyListener() {
+        /*view.setOnKeyListener( new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int keyCode, KeyEvent keyEvent) {
                 System.out.println("key pressed");
@@ -112,7 +112,7 @@ public class StoryFragment extends Fragment {
                 }
                 return false;
             }
-        });
+        });*/
 
         return view;
 
