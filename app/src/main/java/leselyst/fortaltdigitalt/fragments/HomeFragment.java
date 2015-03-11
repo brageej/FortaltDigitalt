@@ -94,6 +94,12 @@ public class HomeFragment extends Fragment {
                 });
             }
         });
+        animalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mListener.openAnimalsView();
+            }
+        });
     }
 
     @Override

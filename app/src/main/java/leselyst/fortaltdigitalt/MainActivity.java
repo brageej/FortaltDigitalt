@@ -10,8 +10,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 
 import leselyst.fortaltdigitalt.fragments.HomeFragment;
+import leselyst.fortaltdigitalt.fragments.animals.AnimalsFragment;
+import leselyst.fortaltdigitalt.fragments.animals.InformationAnimalFragment;
 import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 
 
@@ -90,6 +93,29 @@ public class MainActivity extends Activity implements FragmentCommunication {
         fragmentTransaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_right_out, R.animator.flip_left_in, R.animator.flip_left_out);
         fragmentTransaction.add(R.id.content_frame, StoryFragment.newInstance(currentPage)).commit();//.addToBackStack(null).commit();
 
+    }
+
+    @Override
+    public void openAnimalsView() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.content_frame, AnimalsFragment.newInstance()).addToBackStack(null).commit();
+    }
+
+    public void openInformationView(View view){
+
+        int animal = getAnimal(view.getId());
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.content_frame, InformationAnimalFragment.newInstance(animal)).addToBackStack(null).commit();
+
+    }
+
+    private int getAnimal(int id) {
+        switch (id){
+            case R.id.bearImageButton:
+                return R.string.bear;
+        }
+        return -1;
     }
 
     /**
