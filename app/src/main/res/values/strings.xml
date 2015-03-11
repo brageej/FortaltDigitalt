@@ -5,5 +5,38 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_page1">Det var en varm og solfylt sommerdag, bestefar hadde tatt med seg Frank og Frida for å gå en tur i skogen. Han hadde lenge fortalt dem om skogens konge, og endelig skulle de få møte ham.</string>
+    <string name="text_page2">For å komme seg inn i skogen måtte de gå forbi en stor dam. Den var mørkebrun og full av gjørme. Plutselig oppdaget Frank noe merkelig nede i vannkanten.
+«Hva er det, bestefar?» ropte ham.
+«Det er froskeegg, gutten min.» svarte bestefar.
+</string>
+    <string name="text_page3">Og så fortalte bestefar om hvordan frosker blir til: «Når det begynner å bli varmt kommer de små froskebarna seg løs fra eggene. De kalles rumpetroll, de har en lang hale som de bruker til å svømme med. Etter hvert som de vokser, mister de halen. I stedet får de kraftige bein som de kan hoppe kjempelangt med.»
+</string>
+    <string name="text_page4">«Men hva spiser frosken da?» spurte Frank.
+«Frosken spiser insekter og meitemark. Den har en lang tunge som den skyter maten sin med.» svarte bestefar.
+«Oi!» ropte Frida. «Er dette skogens konge?»
+«Nei, Frida. Ham må vi nok lenger inn i skogen for å se.»
+Dermed forlot de froskedammen og gikk inn i skogen.
+</string>
+    <string name="text_page5">De hadde ikke kommet langt inn i skogen før Frida la merke til noe som pilte opp et tre.
+«Hva var det, bestefar?»
+«Det var et ekorn.» svarte bestefar. «Det bor nok i det treet der borte. Så du at det hadde noe med seg i munnen?» Så fortalte han om hvordan ekornet samler mat.
+</string>
+    <string name="text_page6">«Ekornet bruker nesten hele tiden sin på å samle mat. Den løper frem og tilbake i skogen, og bærer med seg nøtter og frø til et hemmelig gjemmested. Der graver den ned maten slik at den kan spise det senere. Men ekornet samler så mye mat det den ofte glemmer hvor den har gjemt maten.» </string>
+    <string name="text_page7">«Men hva gjør ekornet i huset sitt da, bestefar?» spurte Frida.
+«Den gjemmer seg fra farlige dyr og ligger ofte og sover midt på dagen. Da bruker ekornet den store halen sin til å holde seg varm.»
+«Dette må da være skogens konge! Ikke sant?» utbrøt Frank.
+«Nei, vi må nok gå enda lenger for å finne ham.»
+Dermed lot de ekornet få sove i fred og fortsatte sin ferd innover i skogen.
+</string>
+    <string name="text_page8"></string>
+    <string name="text_page9"></string>
+    <string name="text_page10"></string>
+    <string name="text_page11"></string>
+    <string name="text_page12"></string>
+    <string name="text_page13"></string>
+    <string name="text_page14"></string>
+    <string name="text_page15"></string>
+    <string name="text_page16"></string>
 
 </resources>
