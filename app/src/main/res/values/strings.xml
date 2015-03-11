@@ -5,41 +5,68 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="text_page1">Det var en varm og solfylt sommerdag, bestefar hadde tatt med seg Frank og Frida for å gå en tur i skogen. Han hadde lenge fortalt dem om skogens konge, og endelig skulle de få møte ham.</string>
     <string name="text_page2">For å komme seg inn i skogen måtte de gå forbi en stor dam. Den var mørkebrun og full av gjørme. Plutselig oppdaget Frank noe merkelig nede i vannkanten.
-«Hva er det, bestefar?» ropte ham.
-«Det er froskeegg, gutten min.» svarte bestefar.
-</string>
-    <string name="text_page3">Og så fortalte bestefar om hvordan frosker blir til: «Når det begynner å bli varmt kommer de små froskebarna seg løs fra eggene. De kalles rumpetroll, de har en lang hale som de bruker til å svømme med. Etter hvert som de vokser, mister de halen. I stedet får de kraftige bein som de kan hoppe kjempelangt med.»
-</string>
+        «Hva er det, bestefar?» ropte ham.
+        «Det er froskeegg, gutten min.» svarte bestefar.
+    </string>
+    <string name="text_page3">Og så fortalte bestefar om hvordan frosker blir til: «Når det begynner å bli varmt kommer de små froskebarna seg løs fra eggene. De kalles rumpetroll, de har en lang hale som de bruker til å svømme med. Etter hvert som de vokser, mister de halen. I stedet får de kraftige bein som de kan hoppe kjempelangt med.»</string>
     <string name="text_page4">«Men hva spiser frosken da?» spurte Frank.
-«Frosken spiser insekter og meitemark. Den har en lang tunge som den skyter maten sin med.» svarte bestefar.
-«Oi!» ropte Frida. «Er dette skogens konge?»
-«Nei, Frida. Ham må vi nok lenger inn i skogen for å se.»
-Dermed forlot de froskedammen og gikk inn i skogen.
-</string>
+        «Frosken spiser insekter og meitemark. Den har en lang tunge som den skyter maten sin med.» svarte bestefar.
+        «Oi!» ropte Frida. «Er dette skogens konge?»
+        «Nei, Frida. Ham må vi nok lenger inn i skogen for å se.»
+        Dermed forlot de froskedammen og gikk inn i skogen.
+    </string>
     <string name="text_page5">De hadde ikke kommet langt inn i skogen før Frida la merke til noe som pilte opp et tre.
-«Hva var det, bestefar?»
-«Det var et ekorn.» svarte bestefar. «Det bor nok i det treet der borte. Så du at det hadde noe med seg i munnen?» Så fortalte han om hvordan ekornet samler mat.
-</string>
+        «Hva var det, bestefar?»
+        «Det var et ekorn.» svarte bestefar. «Det bor nok i det treet der borte. Så du at det hadde noe med seg i munnen?» Så fortalte han om hvordan ekornet samler mat.
+    </string>
     <string name="text_page6">«Ekornet bruker nesten hele tiden sin på å samle mat. Den løper frem og tilbake i skogen, og bærer med seg nøtter og frø til et hemmelig gjemmested. Der graver den ned maten slik at den kan spise det senere. Men ekornet samler så mye mat det den ofte glemmer hvor den har gjemt maten.» </string>
     <string name="text_page7">«Men hva gjør ekornet i huset sitt da, bestefar?» spurte Frida.
-«Den gjemmer seg fra farlige dyr og ligger ofte og sover midt på dagen. Da bruker ekornet den store halen sin til å holde seg varm.»
-«Dette må da være skogens konge! Ikke sant?» utbrøt Frank.
-«Nei, vi må nok gå enda lenger for å finne ham.»
-Dermed lot de ekornet få sove i fred og fortsatte sin ferd innover i skogen.
-</string>
+        «Den gjemmer seg fra farlige dyr og ligger ofte og sover midt på dagen. Da bruker ekornet den store halen sin til å holde seg varm.»
+        «Dette må da være skogens konge! Ikke sant?» utbrøt Frank.
+        «Nei, vi må nok gå enda lenger for å finne ham.»
+        Dermed lot de ekornet få sove i fred og fortsatte sin ferd innover i skogen.
+    </string>
     <string name="text_page8">De hadde kommet så langt inn i skogen at de ikke lenger kunne se begynnelsen på stien. Plutselig hørte de en rar lyd. «OH – OH!»
-«Hva var det?» ropte Frank.
-«Det var en ugle, ser du den sitter på greina der oppe?» sa bestefar og pekte på et stort grantre. Der satt det en tjukk ugle og tittet ned på dem med store øyne.
-</string>
-    <string name="text_page9"></string>
-    <string name="text_page10"></string>
-    <string name="text_page11"></string>
-    <string name="text_page12"></string>
-    <string name="text_page13"></string>
-    <string name="text_page14"></string>
-    <string name="text_page15"></string>
-    <string name="text_page16"></string>
-
+        «Hva var det?» ropte Frank.
+        «Det var en ugle, ser du den sitter på greina der oppe?» sa bestefar og pekte på et stort grantre. Der satt det en tjukk ugle og tittet ned på dem med store øyne.
+    </string>
+    <string name="text_page9">«Hvorfor har den så store øyne?» spurte Frank.
+        «Det er fordi den har så godt syn. Det må den ha fordi den jakter på så små dyr, ofte om natta.» fortalte bestefar.
+        «Oi!» sa Frida. «Så den har supersyn?»
+        «Ja, i mørket sitter ugla i et tre og leter etter must og andre små dyr som gjemmer seg nede på bakken.»
+    </string>
+    <string name="text_page10">«Har ugla andre superkrefter også?» spurte Frank.
+        «Å ja!» svarte bestefar. «Ugla kan vri hodet sitt nesten helt rundt, så den slipper å snu seg for å se hva som skjer bak ryggen dens.»
+        «Er dette skogens konge da?» spurte Frida.
+        «Nei, jenta mi. Vi har ikke kommet frem riktig enda.»
+        Dermed gikk bestefar og barna videre langs stien.
+    </string>
+    <string name="text_page11">De var kommet langt inn i skogen nå. Trærne sto tettere. Det var blitt mørkere.
+        «PASS OPP!» ropte plutselig bestefar og stilte seg foran Frida og Frank.
+        «Ser dere det beveger seg i gresset der borte?» han pekte på en gresstue ved siden av veien.
+    </string>
+    <string name="text_page12">«Det er en huggorm. Den må dere passe dere for fordi den er giftig.» fortalte bestefar.
+        «Kommer den til å bite oss?» spurte Frida engstelig.
+        «Nei, den biter bare når den jakter på mat eller blir redd. Men det kan være lurt å være litt forsiktig så man ikke skremmer den.»
+    </string>
+    <string name="text_page13">«Ser dere at den stikker tunga inn og ut av munnen? Huggormen bruker tunga som nese. Den ligger helt stille og lukter, og når den oppdager en mus så hogger den til.» forklarte bestefar.
+        «Et så skummelt dyr MÅ da være skogens konge?» spurte Frank.
+        «Vi må nok enda litt lenger inn i skogen.» svarte bestefar. Dermed listet de seg forbi og log hoggormen være i fred.
+    </string>
+    <string name="text_page14">De hadde gått lenge nå. Sola var på vei ned og Frank og Frida begynte å bli slitne. Plutselig begynte en busk lenger fremme å bevege seg.
+        «Hva er det, bestefar?» spurte Frank. «Er det også et farlig dyr?»
+        «Vent litt så skal dere få se. Hold dere litt på avstand slik at dere ikke skremmer den.»
+    </string>
+    <string name="text_page15">Et stort brunt hode stakk frem fra busken.
+        «Ser dere at det er hodet til en elg?» spurte bestefar.
+        «Åh. Men hva har den på hodet?» spurte Frank. Og bestefar forklarte.
+        «Det kalles gevir, det er en slags form for horn. Hver vinter mister elgen geviret sitt, så det må gro ut et nytt hver vår. Har elgen et stort gevir, betyr det altså at den er veldig gammel.»
+    </string>
+    <string name="text_page16">Elgen hoppet ut av busken og løp raskt oppover en bakke.
+        «Han som har så fin krone må da være skogens konge?» spurte Frida.
+        «Ja, barn.» svarte bestefar. «Nå har vi kommet frem til skogens konge.» Endelig kunne bestefar og barna snu og gå hjem igjen.
+    </string>
 </resources>
