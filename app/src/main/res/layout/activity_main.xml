@@ -4,13 +4,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/content_frame"
-    android:background="#ff4ba3ff">
+    android:background="#ffe3f6ff">
 
 
-    <fragment
-        android:name="leselyst.fortaltdigitalt.fragments.story.StoryFragment"
-        android:id="@+id/story_fragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        />
+    <!--<fragment-->
+        <!--android:name="leselyst.fortaltdigitalt.fragments.story.StoryFragment"-->
+        <!--android:id="@+id/story_fragment"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v4.view.ViewPager>
+
 </FrameLayout>

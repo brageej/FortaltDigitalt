@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StoryFragmentActivity"></activity>
     </application>
     <uses-sdk android:minSdkVersion="11"
         android:targetSdkVersion="21" />

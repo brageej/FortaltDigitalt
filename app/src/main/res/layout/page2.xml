@@ -15,11 +15,11 @@
         android:src="@drawable/background_page2"
         android:layout_above="@+id/include" />
 
-    <include layout="@layout/page_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/include" />
+    <!--<include layout="@layout/page_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/include" />-->
 
 </RelativeLayout>
 

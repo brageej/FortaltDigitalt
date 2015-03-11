@@ -1,17 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="leselyst.fortaltdigitalt.fragments.story.StoryFragment"
-    android:background="@drawable/background_page2">
-
-    <!-- TODO: Update blank fragment layout -->
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ser_huggorm">
 
     <TextView
         android:layout_width="@dimen/textbox_width"
         android:layout_height="wrap_content"
-        android:text="@string/text_page2"
+        android:text="@string/text_page11"
         android:textSize="@dimen/textbox_textsize"
         android:layout_marginLeft="@dimen/textbox_margin_left"
         android:layout_marginStart="@dimen/textbox_margin_left"
@@ -21,4 +18,3 @@
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>
-
