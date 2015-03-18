@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
+
 
 public class StoryFragmentActivity extends FragmentActivity{
 
@@ -17,6 +19,7 @@ public class StoryFragmentActivity extends FragmentActivity{
     public static final String STORAGE_KEY_PAGENUMBER = "SKP";
     private FragmentPagerAdapter fragmentPagerAdapter;
     private ViewPager viewPager;
+
 
 
     @Override

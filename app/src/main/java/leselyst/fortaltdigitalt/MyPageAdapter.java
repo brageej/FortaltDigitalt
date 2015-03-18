@@ -11,7 +11,7 @@ import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 public class MyPageAdapter extends FragmentPagerAdapter {
 
 
-    private static int NUM_PAGES = 10;
+    private static int NUM_PAGES = 9;
 
     public MyPageAdapter(FragmentManager fragmentManager){
         super(fragmentManager);

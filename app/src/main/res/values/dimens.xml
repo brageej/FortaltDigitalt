@@ -11,4 +11,7 @@
 
     <dimen name="animals_buttons_vertical_margin">15dp</dimen>
     <dimen name="animals_buttons_horizontal_margin">55dp</dimen>
+
+    <dimen name="menu_bar_height">50dp</dimen>
+    <dimen name="menu_bar_collapsed">0dp</dimen>
 </resources>

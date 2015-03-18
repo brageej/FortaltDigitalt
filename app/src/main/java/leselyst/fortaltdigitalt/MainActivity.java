@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     private ImageButton animalsButton;
     private ImageButton gamesButton;
     private RelativeLayout customDialog;
+    public static float scale;
 
     public static final String STORAGE_NAME = "SN";
     public static final String STORAGE_KEY_PAGENUMBER = "SKP";
@@ -33,6 +34,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
         bindViews();
+        scale = getApplicationContext().getResources().getDisplayMetrics().density;
+        System.out.println("scale: " + scale);
     }
 
     private void bindViews(){
