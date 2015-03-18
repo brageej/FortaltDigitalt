@@ -26,7 +26,7 @@ public class AnimalsFragmentActivity extends FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, AnimalsFragment.newInstance()).commit();
+        getFragmentManager().beginTransaction().add(R.id.content_frame, AnimalsFragment.newInstance()).addToBackStack(null).commit();
 
     }
 

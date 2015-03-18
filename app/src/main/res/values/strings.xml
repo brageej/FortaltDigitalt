@@ -5,6 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab">\u0009</string>
 
     <string name="text_page1">Det var en varm og solfylt sommerdag, bestefar hadde tatt med seg Frank og Frida for å gå en tur i skogen. Han hadde lenge fortalt dem om skogens konge, og endelig skulle de få møte ham.</string>
     <string name="text_page2">For å komme seg inn i skogen måtte de gå forbi en stor dam. Den var mørkebrun og full av gjørme. Plutselig oppdaget Frank noe merkelig nede i vannkanten.
@@ -69,10 +70,97 @@
         «Han som har så fin krone må da være skogens konge?» spurte Frida.
         «Ja, barn.» svarte bestefar. «Nå har vi kommet frem til skogens konge.» Endelig kunne bestefar og barna snu og gå hjem igjen.
     </string>
-    <string name="bear">Bear</string>
-    <string name="elk">Elk</string>
-    <string name="snake">Snake</string>
-    <string name="frog">Frog</string>
-    <string name="owl">Owl</string>
-    <string name="squirrel">Squirrel</string>
+    <string name="info_elk">
+        kalles ofte skogens konge\n
+        Har klover(klovdyrart)\n
+        Norges største nålevende pattedyr\n
+        Pelsen består av tett, kort ull og lange, grå dekkhår.\n
+        Elgen har gråbrun til svart pels om sommeren. Om vinteren er pelsen mer grå.\n
+        Har gevir\n
+            \u0009-Bare hannen har gevir. Det kan ha et spenn på to meter, ha opptil 20 tagger og veie 30 kg\n
+            \u0009-Geviret blir brukt i kamp under paringssesongen på høsten, felles hver vinter og vokser ut igjen på våren.\n
+        Elgen er knyttet til skogen. Om vinteren lever den av skudd, smågrener og bark av forskjellige løvtrær, einer, furu og gran; om sommeren av gress, urter og løv.\n
+        Elgkua kan bli drektig første gang når den er 1½ år gammel, drektighetstiden er 9 måneder.\n
+            \u0009-Kalven fødes i slutten av mai eller begynnelsen av juni og patter moren til langt utover høsten. Tvillingkalver er vanlig.\n
+            \u0009-Kalven drikker melk i tre til fire måneder og holder seg sammen med moren i minst et år. Elgen er utvokst i fire–fem-års alderen\n
+        Jakttiden for elg varierer fra kommune til kommune, men vil som regel foregå innenfor tidsrommet 10. sept.–31. okt.\n
+        Den er drøvtygger og har fire mager, på samme måte som kyr\n
+        Den er en dyktig svømmer og oppholder seg ofte i vann\n
+        Elg er aktiv hele dagen, men gjerne mer aktiv i grålysningen og skumringen\n
+        Bortsett fra mennesker er brunbjørn og ulv elgens eneste naturlige fiender i Europa\n
+        Den kan løpe veldig stille gjennom tett skog, med en hastighet på opptil 60 km/t\n
+        En elg kan veie 700 kg, bli 3 meter lang og ha en skulderhøyde på 2 meter\n
+        Elgen lever alene eller i små familiegrupper\n
+    </string>
+    <string name="info_frog">
+        Hannfrosken kvekker for å tiltrekke seg damer.\n
+        Frosker klarer ikke å svelge uten å blunke\n
+        En frosk kan legge 4000 egg\n
+        Froskebarn kalles rumpetroll. Rumpetroll får først bakbein og siden forbein, etter hvert begynner halen å forsvinne.\n
+        Frosken drikker gjennom huden: huden til froskene kan ta inn vann, dermed  trenger de ikke drikke med munnen\n
+        Frosken kan fange insekter ved å “skyte” dem med den klebrige og lange tunga si\n
+        Favortittmat: insekter og mark\n
+        Hopper 30 ganger sin egen lengde: hvis du skulle hoppe like langt, måtte du hoppet over 40 meter i ett sprett\n
+        Arten overvintrer som oftest på bunnen av en dam eller bekk, der den puster med huden for å få oksygen.\n
+        Frosker er amfibier: det betyr at de kan leve både i vann og på land\n
+    </string>
+    <string name="info_fox">
+        blir tre år i det fri, men 12-13 år i fangenskap\n
+        har latinsk navn vulpes vulpes vulpes\n
+        er rovdyr\n
+        er pattedyr\n
+        blir mellom 5-15 kg, men sjelden over ti kg\n
+        blir 50-80 cm\n
+        kan være rød grå, sølv eller hvit\n
+        spiser egg, insekter, små pattedyr, små gnagere og matavfall\n
+        kan være åtseleter\n
+        lever i familier på fire-fem dyr\n
+        alle rever har korsmønster på ryggen\n
+        gravid i 53 dager\n
+        hanner slåss under brunsttid\n
+        finnes i Europa, Asia Afrika og Nord-Amerika\n
+        lever i hi\n
+        løper 50 km/t\n
+    </string>
+    <string name="info_squirrel">
+        Adferd\n
+            \t-Aktivt om morgene og sent om kvelden\n
+            \t-Hviler i hiet sitt om dagen for å unngå varme og rovfugler\n
+            \t-Ved dårlig være kan ekornet bli i hiet sitt i flere dager\n
+        Egenskaper\n
+            \t-halen\n
+                \t\t-hjelpre til med å holde balansen når den hopper mellom grener\n
+                \t\t-holder dyret varmt når det sover\n
+            \t-klør\n
+                \t\t-lange og skarpe\n
+                \t\t-hjelper de med å klatre i trær\n
+                \t\t-et ekorn kan klater fortere enn det løper\n
+        Hiet\n
+            \t-som regel i hulrom i trær\n
+            \t-kan også være frittliggende i treet\n
+            \t-er bare litt større en ekornet\n
+        Trusler\n
+            \t-Mår, ugler og andre rovfugler\n
+            \t-Røyskatter tar ekornbarn\n
+        Forplantning\n
+            \t-Gravid i ca 4-5 uker\n
+            \t-Kan få opp til 3 kull med unger hvert år, der et kull kan ha 1-7 unger\n
+            \t-ekornmoren passer på ungene alene, far jages vekk etter parring\n
+        Føde\n
+            \t-Hovedsakelig røtter, nøtter, frø og knopper\n
+            \t-Kan også egg og fugleunger i hekkesesongen\n
+            \t-Viktigst er gran og furukongler siden de finnes i store mengder hele året\n
+            \t-Bruker store deler av tiden på å finne mat\n
+            \t-mat taes med til et trygt sted før det spises\n
+            \t-mat som er til overs graves ofte ned\n
+                \t\t-oftest finner ikke ekornet denne maten igjen\n
+
+    </string>
+
+    <string name="bear">Bjørn</string>
+    <string name="elk">Elg</string>
+    <string name="snake">Hoggorm</string>
+    <string name="frog">Frosk</string>
+    <string name="owl">Ugle</string>
+    <string name="squirrel">Ekorn</string>
 </resources>

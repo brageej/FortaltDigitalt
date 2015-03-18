@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tittel"
+        android:text="@string/bear"
         android:id="@+id/textView"
         android:textSize="70dp"
         android:layout_alignParentTop="true"
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/info_elk"
+                android:text="@string/info_fox"
                 android:id="@+id/textView2"
                 android:textSize="30dp"
                 android:layout_below="@+id/textView3"

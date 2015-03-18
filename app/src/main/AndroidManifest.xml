@@ -18,7 +18,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".StoryFragmentActivity"></activity>
-        <activity android:name=".fragments.animals.AnimalsFragmentActivity"></activity>
+        <activity
+            android:name=".fragments.animals.AnimalsFragmentActivity"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".MainActivity" >
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
     <uses-sdk android:minSdkVersion="11"
         android:targetSdkVersion="21" />

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tittel"
+        android:text="@string/snake"
         android:id="@+id/textView"
         android:textSize="70dp"
         android:layout_alignParentTop="true"
