@@ -1,13 +1,11 @@
 package leselyst.fortaltdigitalt.fragments.animals;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import leselyst.fortaltdigitalt.FragmentCommunication;
 import leselyst.fortaltdigitalt.R;
 
 /**
@@ -17,10 +15,8 @@ import leselyst.fortaltdigitalt.R;
  */
 public class InformationAnimalFragment extends Fragment {
 
-    private static final String ARG_ANIMAL = "animal";
-    private int animal;
-
-    private FragmentCommunication mListener;
+    private static final String ARG_ANIMAL = "animalView";
+    private int animalView;
 
     /**
      * Use this factory method to create a new instance of
@@ -45,7 +41,7 @@ public class InformationAnimalFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            animal = getArguments().getInt(ARG_ANIMAL);
+            animalView = getArguments().getInt(ARG_ANIMAL);
         }
     }
 
@@ -59,33 +55,20 @@ public class InformationAnimalFragment extends Fragment {
     }
 
     private int getLayout() {
-        int layout;
-        switch (animal){
-            case R.string.bear:
-                layout = R.layout.fragment_information_animal;
-                break;
-            case R.string.elk:
-                layout = R.layout.fragment_information_animal;
-                break;
-            default:
-                layout = R.layout.fragment_information_animal;
+        switch (animalView){
+            case R.id.bearImageButton:
+                return R.layout.fragment_information_animal;
+            case R.id.elkImageButton:
+                return R.layout.fragment_information_animal;
+            case R.id.snakeImageButton:
+                return R.layout.fragment_information_animal;
+            case R.id.frogImageButton:
+                return R.layout.fragment_information_animal;
+            case R.id.owlImageButton:
+                return R.layout.fragment_information_animal;
+            case R.id.squirrelImageButton:
+                return R.layout.fragment_information_animal;
         }
-        return layout;    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (FragmentCommunication) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+        return -1;
     }
 }

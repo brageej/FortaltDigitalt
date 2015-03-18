@@ -1,11 +1,18 @@
 package leselyst.fortaltdigitalt;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
+import leselyst.fortaltdigitalt.fragments.animals.AnimalsFragment;
+import leselyst.fortaltdigitalt.fragments.animals.AnimalsFragmentActivity;
+import leselyst.fortaltdigitalt.fragments.animals.InformationAnimalFragment;
 
 /**
  * Created by BrageEkroll on 11.03.2015.
@@ -19,6 +26,7 @@ public class MainActivity extends Activity {
 
     public static final String STORAGE_NAME = "SN";
     public static final String STORAGE_KEY_PAGENUMBER = "SKP";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,5 +85,7 @@ public class MainActivity extends Activity {
         return getSharedPreferences(STORAGE_NAME,0).getInt(STORAGE_KEY_PAGENUMBER,-1);
     }
 
-
+    public void openAnimalsView(View view) {
+        startActivity(AnimalsFragmentActivity.newInstace(this));
+    }
 }

@@ -18,8 +18,6 @@ import leselyst.fortaltdigitalt.R;
  */
 public class AnimalsFragment extends Fragment {
 
-    private FragmentCommunication mListener;
-
     /**
      * Use this factory method to create a new instance of
      *
@@ -45,22 +43,5 @@ public class AnimalsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_animals, container, false);
-    }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (FragmentCommunication) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement FragmentCommunication");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 }

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".StoryFragmentActivity"></activity>
+        <activity android:name=".fragments.animals.AnimalsFragmentActivity"></activity>
     </application>
     <uses-sdk android:minSdkVersion="11"
         android:targetSdkVersion="21" />

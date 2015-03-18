@@ -69,6 +69,10 @@
         «Han som har så fin krone må da være skogens konge?» spurte Frida.
         «Ja, barn.» svarte bestefar. «Nå har vi kommet frem til skogens konge.» Endelig kunne bestefar og barna snu og gå hjem igjen.
     </string>
-    <string name="bear">bear</string>
-    <string name="elk">elk</string>
+    <string name="bear">Bear</string>
+    <string name="elk">Elk</string>
+    <string name="snake">Snake</string>
+    <string name="frog">Frog</string>
+    <string name="owl">Owl</string>
+    <string name="squirrel">Squirrel</string>
 </resources>
