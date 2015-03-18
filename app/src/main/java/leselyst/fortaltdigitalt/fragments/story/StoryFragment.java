@@ -1,15 +1,10 @@
 package leselyst.fortaltdigitalt.fragments.story;
 
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import leselyst.fortaltdigitalt.FragmentCommunication;
 import leselyst.fortaltdigitalt.R;
 
 /**
@@ -21,15 +16,12 @@ import leselyst.fortaltdigitalt.R;
  * create an instance of this fragment.
  */
 public class StoryFragment extends Fragment {
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // the fragment initialization parameters, e.g. ARG_PAGE_NUMBER
     private static final String ARG_PAGE_NUMBER = "page number";
 
     // TODO: Rename and change types of parameters
     private int pageNumber;
 
-    private GestureDetector gestureDetector;
-
-    private FragmentCommunication mListener;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -67,23 +59,11 @@ public class StoryFragment extends Fragment {
         view.setFocusableInTouchMode(true);
         view.requestFocus();
         return view;
-
-
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
     private int getLayout(int page){
-        int layout = 0;
+        int layout;
         switch (page){
             case 0:
                 layout = R.layout.page1;
