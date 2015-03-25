@@ -30,7 +30,8 @@
         android:background="@android:color/transparent"
         android:text="Start Historie"
         android:layout_alignBottom="@+id/story_fragment"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter" />
     <ImageButton
         android:id="@+id/animalButtpn"
         android:layout_width="wrap_content"
