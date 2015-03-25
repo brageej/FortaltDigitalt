@@ -56,8 +56,8 @@ public class InformationAnimalFragment extends Fragment {
 
     private int getLayout() {
         switch (animalView){
-            case R.id.bearImageButton:
-                return R.layout.fragment_information_bear;
+            case R.id.foxImageButton:
+                return R.layout.fragment_information_fox;
             case R.id.elkImageButton:
                 return R.layout.fragment_information_elk;
             case R.id.snakeImageButton:

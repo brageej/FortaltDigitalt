@@ -12,15 +12,17 @@
     <ImageButton
         android:layout_width="307dp"
         android:layout_height="333dp"
-        android:id="@+id/bearImageButton"
+        android:id="@+id/foxImageButton"
         android:layout_row="0"
         android:layout_column="0"
-        android:src="@drawable/animals"
+        android:src="@drawable/rev"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -28,12 +30,14 @@
         android:id="@+id/elkImageButton"
         android:layout_row="0"
         android:layout_column="1"
-        android:src="@drawable/animals"
+        android:src="@drawable/elg"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -41,12 +45,14 @@
         android:id="@+id/snakeImageButton"
         android:layout_row="0"
         android:layout_column="2"
-        android:src="@drawable/animals"
+        android:src="@drawable/huggorm_dyr"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -54,12 +60,14 @@
         android:id="@+id/frogImageButton"
         android:layout_row="1"
         android:layout_column="0"
-        android:src="@drawable/animals"
+        android:src="@drawable/frosk"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -68,11 +76,13 @@
         android:layout_row="1"
         android:layout_column="1"
         android:onClick = "openInformationView"
-        android:src="@drawable/animals"
+        android:src="@drawable/ugle"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -80,10 +90,12 @@
         android:id="@+id/squirrelImageButton"
         android:layout_row="1"
         android:layout_column="2"
-        android:src="@drawable/animals"
+        android:src="@drawable/ekorn"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
-        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"/>
+        android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
 </GridLayout>
