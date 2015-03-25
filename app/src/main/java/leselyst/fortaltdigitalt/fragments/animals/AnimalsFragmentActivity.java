@@ -58,7 +58,7 @@ public class AnimalsFragmentActivity extends FragmentActivity{
     public void openInformationView(View view){
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.content_frame, InformationAnimalFragment.newInstance(view.getId())).addToBackStack(null).commit();
+        fragmentTransaction.replace(R.id.content_frame, InformationAnimalFragment.newInstance(view.getId())).addToBackStack(null).commit();
 
     }
 }
