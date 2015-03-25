@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Visste du at?/fakta om"
+                android:text="@string/factHeader"
                 android:id="@+id/textView3"
                 android:textSize="40dp"
                 android:layout_alignParentTop="true"
