@@ -3,12 +3,20 @@ package leselyst.fortaltdigitalt;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import java.lang.ref.WeakReference;
 
 import leselyst.fortaltdigitalt.fragments.story.StoryFragment;
 
@@ -17,7 +25,7 @@ public class StoryFragmentActivity extends FragmentActivity{
 
     public static final String STORAGE_NAME = "SN";
     public static final String STORAGE_KEY_PAGENUMBER = "SKP";
-    private FragmentPagerAdapter fragmentPagerAdapter;
+    private FragmentStatePagerAdapter fragmentPagerAdapter;
     private ViewPager viewPager;
 
 
@@ -28,7 +36,7 @@ public class StoryFragmentActivity extends FragmentActivity{
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.vpPager);
-        fragmentPagerAdapter = new MyPageAdapter(getSupportFragmentManager());
+        fragmentPagerAdapter = new MyPageAdapter(getSupportFragmentManager(),16);
         viewPager.setAdapter(fragmentPagerAdapter);
         Bundle bundle = getIntent().getExtras();
         viewPager.setCurrentItem(bundle.getInt("Page"));
@@ -76,4 +84,6 @@ public class StoryFragmentActivity extends FragmentActivity{
         storage.edit().putInt(STORAGE_KEY_PAGENUMBER,pageNumber).commit();
 
     }
+
+
 }

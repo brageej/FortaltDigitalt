@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plukkande_ekorn">
+
+    <TextView
+        android:layout_width="@dimen/textbox_width"
+        android:layout_height="wrap_content"
+        android:text="@string/text_page6"
+        android:textSize="@dimen/textbox_textsize"
+        android:layout_marginLeft="@dimen/textbox_margin_left"
+        android:layout_marginStart="@dimen/textbox_margin_left"
+        android:layout_marginTop="@dimen/textbox_margin_top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_button"
+        android:src="@drawable/menu_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <include layout="@layout/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/menu_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        >
+    </include>
+
+</RelativeLayout>
