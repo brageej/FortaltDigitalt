@@ -9,17 +9,6 @@
     android:background="@drawable/background1"
     tools:context="leselyst.fortaltdigitalt.fragments.HomeFragment">
 
-    <ImageButton
-        android:id="@+id/gameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/games"
-        android:background="@android:color/transparent"
-        android:text="Spill"
-        android:layout_alignTop="@+id/storyButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <include layout = "@layout/custom_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,24 +25,24 @@
         android:src="@drawable/story"
         android:background="@android:color/transparent"
         android:text="Start Historie"
+        android:layout_marginLeft="230dp"
+        android:layout_marginStart="230dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/gameButton"
-        android:layout_toEndOf="@+id/gameButton"
-        android:layout_marginLeft="66dp"
-        android:layout_marginStart="66dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/animalButtpn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/animals"
+        android:src="@drawable/ugle"
         android:background="@android:color/transparent"
         android:text="Dyr"
         android:onClick="openAnimalsView"
-        android:layout_alignParentTop="true"
         android:layout_above="@+id/storyButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="91dp" />
+        android:layout_marginRight="51dp"
+        android:layout_marginEnd="51dp" />
 
 </RelativeLayout>
