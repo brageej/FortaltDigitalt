@@ -13,16 +13,16 @@
         android:layout_width="307dp"
         android:layout_height="333dp"
         android:id="@+id/foxImageButton"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:src="@drawable/rev"
-        android:onClick = "openInformationView"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:src="@drawable/tilbake_forside"
+        android:onClick = "backToMainMenu"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"
         android:layout_marginTop="@dimen/animals_buttons_vertical_margin"
         android:layout_marginLeft="@dimen/animals_buttons_horizontal_margin"
         android:layout_marginRight="@dimen/animals_buttons_horizontal_margin"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
 
     <ImageButton
         android:layout_width="307dp"
@@ -88,8 +88,8 @@
         android:layout_width="307dp"
         android:layout_height="333dp"
         android:id="@+id/squirrelImageButton"
-        android:layout_row="1"
-        android:layout_column="2"
+        android:layout_row="0"
+        android:layout_column="0"
         android:src="@drawable/ekorn"
         android:onClick = "openInformationView"
         android:layout_marginBottom="@dimen/animals_buttons_vertical_margin"

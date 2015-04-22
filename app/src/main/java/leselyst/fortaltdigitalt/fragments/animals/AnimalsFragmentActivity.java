@@ -64,4 +64,7 @@ public class AnimalsFragmentActivity extends FragmentActivity{
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content_frame, AnimalsFragment.newInstance()).commit();
     }
+    public void backToMainMenu(View view){
+        onBackPressed();
+    }
 }
