@@ -213,7 +213,7 @@ public class StoryFragment extends Fragment{
                 for(int i = animation.getNumberOfFrames()-1; i < animation.getNumberOfFrames(); i++){
                     if(currentFrame == animation.getFrame(i)){
                         System.out.println("not running");
-                        return getResources().getDrawable(R.drawable.animasjon0001);
+                        return getResources().getDrawable(getNextStartImage(currentAnim));
                     }
                 }
             }
@@ -225,6 +225,9 @@ public class StoryFragment extends Fragment{
             super.onPostExecute(drawable);
             if(drawable != null) {
                 firstImage.setBackground(drawable);
+                if(currentAnim == 3){
+                    currentAnim = 0;
+                }
                 new LoadAnimationTask(firstImage, currentAnim++).execute();
             }
         }
@@ -239,8 +242,29 @@ public class StoryFragment extends Fragment{
             case 2:
                 next = R.drawable.frog_anim2;
                 break;
+            case 3:
+                next = R.drawable.frog_anim3;
+                break;
             default:
                 next = R.drawable.frog_anim;
+        }
+        return next;
+    }
+
+    private int getNextStartImage(int currentAnim){
+        int next;
+        switch (currentAnim){
+            case 0:
+                next = R.drawable.animasjon0001;
+                break;
+            case 1:
+                next = R.drawable.andreanimasjon0001;
+                break;
+            case 2:
+                next = R.drawable.tredjeanimasjon0001;
+                break;
+            default:
+                next = R.drawable.animasjon0001;
         }
         return next;
     }
