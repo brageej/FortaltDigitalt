@@ -35,7 +35,7 @@
         android:id="@+id/animalButtpn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ugle"
+        android:src="@drawable/animals"
         android:background="@android:color/transparent"
         android:text="Dyr"
         android:onClick="openAnimalsView"
